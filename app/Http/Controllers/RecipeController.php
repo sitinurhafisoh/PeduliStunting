@@ -13,10 +13,10 @@ class RecipeController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
-            'image' => 'nullable|image',
+            'image_recipe' => 'nullable|image_recipe',
         ]);
 
-        $imagePath = $request->file('image') ? $request->file('image')->store('images', 'public') : null;
+        $imagePath = $request->file('image_recipe') ? $request->file('image_recipe')->store('images_recipe', 'public') : null;
 
         Article::create([
             'title' => $request->title,
