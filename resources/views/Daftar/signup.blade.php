@@ -1,3 +1,4 @@
+<!-- resources/views/signup.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +71,8 @@
 <body>
     <div class="form-container">
         <h2>Sign Up</h2>
-        <form action="process_signup.php" method="POST">
+        <form action="{{ route('signup.submit') }}" method="POST">
+            @csrf
             <!-- Nama Lengkap -->
             <div class="mb-3">
                 <input type="text" name="namaLengkap" class="form-control" placeholder="Nama Lengkap" required>
@@ -93,7 +95,7 @@
             </div>
             <!-- Role -->
             <div class="mb-3">
-                <select name="role" id="role" class="form-control" placeholder="Login sebagai" required>
+                <select name="role" id="role" class="form-control" required>
                     <option value="" disabled selected>Pilih Role</option>
                     <option value="parent">Parent</option>
                     <option value="admin">Admin</option>
@@ -101,10 +103,10 @@
             </div>
             <!-- Submit Button -->
             <button type="submit" class="btn btn-primary w-100">Sign Up</button>
-            <p class="text-center text-muted mt-3">Sudah punya akun? <a href="login.php">Login</a></p>
+            <p class="text-center text-muted mt-3">Sudah punya akun? <a href="{{ route('login') }}">Login</a></p>
         </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html
