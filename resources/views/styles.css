@@ -1,0 +1,16 @@
+/* Menambahkan space antara item menu */
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Menambahkan jarak antara setiap item menu */
+}
+
+/* Menambahkan jarak pada navbar untuk tampilan yang lebih baik */
+.navbar-nav {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Optional: Menambahkan jarak kiri pada navbar */
+.navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+}
