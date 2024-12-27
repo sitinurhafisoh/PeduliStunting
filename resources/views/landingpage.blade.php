@@ -23,7 +23,7 @@
             <h2 class="text-muted">Layanan Kesehatan Ibu dan Anak</h2>
             <h1 class="text-primary">Cegah Stunting Sejak Dini, Demi Masa Depan Negeri</h1>
             <p>Kami hadir untuk membantu masyarakat mendapatkan informasi yang tepat dan akses ke program-program yang mendukung tumbuh kembang anak secara optimal.</p>
-            <a href="{{ route('signup') }}" class="btn btn-primary">Sign Up</a>
+            <a href="{{ route('Daftar.signup') }}" class="btn btn-primary">Sign Up</a>
         </div>
         <div>
             <img src="{{ asset('img/rb_2148974790.png') }}" alt="Ilustrasi Anak Sehat" class="img-fluid">

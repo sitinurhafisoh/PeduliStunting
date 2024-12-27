@@ -11,23 +11,17 @@ use Illuminate\Support\Facades\Auth;
 
 
 // Rute untuk halaman landing page
-Route::get('/landingpage', function () {
+Route::get('/', function () {
     return view('landingpage'); 
 });
+
+Route::get('/signup', [RegisterController::class, 'signup'])->name('Daftar.signup');
 
 // Rute untuk halaman signup yang ada di dalam folder Daftar
 Route::get('/signup', function () {
     return view('Daftar.signup'); // Mengarah ke file signup.blade.php di dalam folder Daftar
 });
 
-Route::post('/signup', [RegisterController::class, 'store'])->name('signup.store');
-
-
-Route::get('/login', function () {
-    return view('Daftar.login'); // Mengarahkan ke file login.blade.php
-});
-
-//About
 
 // Artikel
 Route::resource('articles', ArticleController::class);
