@@ -43,6 +43,12 @@ Route::resource('nutritions', NutritionController::class);
 // Data Bayi
 Route::resource('baby-data', BabyDataController::class);
 
+//untuk menampilkan form input data anak
+Route::get('/input-data-anak', [BabyDataController::class, 'index'])->name('baby_data.index');
+
+//untuk menyimpan data anak ke database
+Route::post('/input-data-anak', [BabyDataController::class, 'store'])->name('baby_data.store');
+
 Route::get('/signup', function () {
     return view('signup');
 });
