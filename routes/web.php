@@ -95,3 +95,14 @@ Route::get('/dashboard_admin', function () {
 Route::get('/dashboard_parent', function () {
     return view('dashboard.parent'); // Sesuaikan dengan lokasi file dashboard parent
 })->name('dashboard_parent');
+
+//rute kelola 
+Route::get('/', function () {
+    return view('home');
+});
+Route::get('/mpasi/manage', [App\Http\Controllers\RecipeController::class, 'index'])->name('recipes.index');
+Route::get('/mpasi/create', [App\Http\Controllers\RecipeController::class, 'create'])->name('recipes.create');
+Route::post('/mpasi', [App\Http\Controllers\RecipeController::class, 'store'])->name('recipes.store');
+Route::get('/recipes/{recipe}/edit', [App\Http\Controllers\RecipeController::class, 'edit'])->name('recipes.edit');
+Route::put('/recipes/{recipe}', [App\Http\Controllers\RecipeController::class, 'update'])->name('recipes.update');
+Route::delete('/recipes/{recipe}', [App\Http\Controllers\RecipeController::class, 'destroy'])->name('recipes.destroy');
